@@ -1,8 +1,10 @@
 import Carrers from "./components/Carrers";
-import Container from "./components/Container/Container";
+import Container from "./components/Reusable/Container";
 import MyArticles from "./components/MyArticles";
 import ProfileDescription from "./components/ProfileDescription";
 import SocialMedia from "./components/SocialMedia";
+import Divider from "./components/Reusable/Divider";
+import Projects from "./components/Projects";
 
 function App() {
   return (
@@ -10,17 +12,20 @@ function App() {
       <Container className="py-12">
         <div className="grid grid-cols-12 gap-6">
           <div className="col-span-4">
-            <ProfileDescription />
-            <SocialMedia />
+            <div className="sticky top-12">
+              <ProfileDescription />
+              <SocialMedia />
+            </div>
           </div>
           <div className="col-span-5">
-            <h3 className="text-blue-200 text-2xl font-semibold mb-3">
-              Experiences
-            </h3>
             <Carrers />
+
+            <Divider className="my-12" />
+
+            <Projects />
           </div>
 
-          <div className="col-span-3 bg-blue-950 p-6 overflow-auto">
+          <div className="col-span-3">
             <MyArticles />
           </div>
         </div>

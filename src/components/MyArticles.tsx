@@ -15,27 +15,29 @@ import devto_articles from "../resources/devto_articles.json";
 
 const MyArticles = () => {
   return (
-    <>
-      <h2 className="text-2xl font-bold text-blue-100 leading-snug">
-        Latest blog
-      </h2>
+    <div className=" h-[800px] overflow-auto">
+      <div className="bg-slate-950 p-6 sticky top-0 shadow-2xl">
+        <h2 className="text-2xl font-bold text-blue-100 leading-snug">
+          Latest blog
+        </h2>
 
-      <h3 className="mb-6 mt-2">
-        <a
-          href="https://dev.to/alfism1"
-          rel="noreferrer"
-          target="_blank"
-          className="text-slate-100 font-bold"
-        >
-          See all my posts here{" "}
-          <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-        </a>
-      </h3>
+        <h3 className="mt-2">
+          <a
+            href="https://dev.to/alfism1"
+            rel="noreferrer"
+            target="_blank"
+            className="text-slate-100 font-bold"
+          >
+            See all my posts here{" "}
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+          </a>
+        </h3>
+      </div>
 
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 bg-slate-950 p-6 pt-0">
         {devto_articles.map((article) => {
           return (
-            <div className="border-t border-blue-900 pt-3">
+            <div className="border-t border-slate-900 pt-3">
               <a
                 key={article.id}
                 href={article.url}
@@ -46,7 +48,10 @@ const MyArticles = () => {
                 {article.title}
               </a>
 
-              <Tags tags={article.tag_list} />
+              <Tags
+                tags={article.tag_list}
+                className="bg-green-900 border border-green-700"
+              />
 
               {/* <div className="flex gap-1 text-slate-300 text-sm mt-2 flex-wrap">
                 {article?.tag_list?.map((tag) => {
@@ -65,7 +70,7 @@ const MyArticles = () => {
           );
         })}
       </div>
-    </>
+    </div>
   );
 };
 
