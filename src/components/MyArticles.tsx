@@ -53,16 +53,6 @@ const MyArticles = () => {
                 className="bg-green-900 border border-green-700"
               />
 
-              {/* <div className="flex gap-1 text-slate-300 text-sm mt-2 flex-wrap">
-                {article?.tag_list?.map((tag) => {
-                  return (
-                    <span className="bg-slate-950 rounded-md px-1 block">
-                      {tag}
-                    </span>
-                  );
-                })}
-              </div> */}
-
               <span className="block text-slate-400 text-sm mt-2">
                 <b>{convertToReadableDate(article.published_at)}</b>
               </span>

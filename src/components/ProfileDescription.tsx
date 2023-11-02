@@ -11,7 +11,7 @@ const ProfileDescription = () => {
 
       <div className="text-2xl font-bold text-blue-50">Hi there 👋</div>
       <h1 className="text-6xl font-bold text-blue-100 leading-snug">
-        My name is <span className="text-orange-200">X</span>
+        My name is <span className="text-orange-200">Alfi</span>
       </h1>
       <div className="text-3xl font-bold text-green-200">
         Full-stack developer 🧑‍💻
