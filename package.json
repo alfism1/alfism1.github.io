@@ -1,7 +1,6 @@
 {
   "name": "my-portfolio",
   "version": "0.1.0",
-  "proxy": "https://dev.to/api",
   "homepage": "https://alfism1.github.io",
   "private": true,
   "dependencies": {
