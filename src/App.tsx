@@ -1,24 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Carrers from "./components/Carrers";
+import Container from "./components/Container/Container";
+import MyArticles from "./components/MyArticles";
+import ProfileDescription from "./components/ProfileDescription";
+import SocialMedia from "./components/SocialMedia";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-slate-900 w-full h-full">
+      <Container className="py-12">
+        <div className="grid grid-cols-12 gap-6">
+          <div className="col-span-4">
+            <ProfileDescription />
+            <SocialMedia />
+          </div>
+          <div className="col-span-5">
+            <h3 className="text-blue-200 text-2xl font-semibold mb-3">
+              Experiences
+            </h3>
+            <Carrers />
+          </div>
+
+          <div className="col-span-3 bg-blue-950 p-6 overflow-auto">
+            <MyArticles />
+          </div>
+        </div>
+      </Container>
     </div>
   );
 }

@@ -1,0 +1,71 @@
+[
+  {
+    "periode": "Oct 2019 - Present",
+    "title": "The Edge Singapore",
+    "url": "https://www.theedgesingapore.com",
+    "description": "Assigned as a team leader to develop The Edge Singapore website. Collaborated with internal team to improve the website and work with other team to provide APIs.",
+    "techs": [
+      "Typescript",
+      "React JS",
+      "Next JS",
+      "Redux",
+      "Redis Cache",
+      "AWS",
+      "Node JS",
+      "Stripe Payment",
+      "Python",
+      "Flask",
+      "HTML",
+      "CSS",
+      "Javascript",
+      "jQuery",
+      "PHP",
+      "MySQL",
+      "Drupal",
+      "Lumen",
+      "Content Management System"
+    ]
+  },
+  {
+    "periode": "Dec 2018 - Present",
+    "title": "Edgeprop Singapore",
+    "url": "https://www.edgeprop.sg",
+    "description": "Collaborated with internal team to fix bugs on the website. Developed new features, CMS, and worked with external team to build some new projects.",
+    "techs": [
+      "HTML",
+      "CSS",
+      "Javascript",
+      "jQuery",
+      "PHP",
+      "MySQL",
+      "Drupal",
+      "Laravel",
+      "Content Management System"
+    ]
+  },
+
+  {
+    "periode": "Jan 2018 - Present",
+    "title": "Freelance Developer",
+    "description": "Worked as a professional freelancer. Developed websites, web app, and mobile app for clients. Also worked on some personal projects.",
+    "techs": [
+      "React JS",
+      "Next JS",
+      "Python",
+      "Flask",
+      "Xendit Payment",
+      "Node JS",
+      "Nest JS",
+      "Typescript",
+      "HTML",
+      "CSS",
+      "Javascript",
+      "jQuery",
+      "PHP",
+      "MySQL",
+      "Laravel",
+      "Content Management System",
+      "Raspberry Pi"
+    ]
+  }
+]
