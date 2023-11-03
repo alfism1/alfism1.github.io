@@ -5,7 +5,7 @@ const ProfileDescription = () => {
         <img
           src="https://avatars.githubusercontent.com/u/19965233?v=4"
           alt="Alfi Samudro"
-          className="rounded-full w-32 h-32 lg:w-48 lg:h-48"
+          className="rounded-full w-32 h-32 lg:w-48 lg:h-48 animate-spin-slow"
         />
       </div>
 
