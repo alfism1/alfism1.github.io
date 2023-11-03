@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import Tags from "./Tags";
 
-import devto_articles from "../resources/devto_articles.json";
+import devto_articles from "../datas/devto_articles.json";
 
 // interface MyArticlesProps {
 //   articles: Pick<

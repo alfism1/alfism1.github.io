@@ -1,6 +1,6 @@
 import Tags from "./Tags";
 
-import experiences from "../resources/experiences.json";
+import experiences from "../datas/experiences.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import Header3 from "./Reusable/Header3";

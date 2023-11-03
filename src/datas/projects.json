@@ -1,0 +1,20 @@
+[
+  {
+    "projectName": "Project 1",
+    "githubLink": "https://blablabla.com",
+    "projectLink": "blablabla.com",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo itaque blanditiis molestiae corporis dolore aliquam culpa sed. Quisquam veritatis iste hic enim, numquam iure. Eveniet facilis ipsa sit nesciunt laboriosam.",
+    "mainImage": "/projects/iss_income/1.jpg",
+    "galleryFolder": "/projects/iss_income",
+    "techs": ["HTML", "CSS", "JavaScript"]
+  },
+
+  {
+    "projectName": "Project 2",
+    "githubLink": "blablabla.com",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo itaque blanditiis molestiae corporis dolore aliquam culpa sed. Quisquam veritatis iste hic enim, numquam iure. Eveniet facilis ipsa sit nesciunt laboriosam.",
+    "mainImage": "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
+    "galleryFolder": "/projects/ufatech",
+    "techs": ["HTML", "CSS", "JavaScript"]
+  }
+]
