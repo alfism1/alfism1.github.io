@@ -82,7 +82,11 @@ const ProjectItem: FC<ProjectItemProps> = ({
         <p className="mb-3">{description}</p>
 
         <span className="text-sm font-bold">Tech stack:</span>
-        <Tags tags={[...techs]} className="bg-red-950 border border-red-800" />
+        <Tags
+          tags={[...techs]}
+          // className="bg-red-950 border border-red-800"
+          // randomizeColor
+        />
       </div>
     </div>
   );
@@ -102,8 +106,6 @@ const Projects = () => {
     setPhotosPath([]);
   }
 
-  console.log(photosPath.map((path) => ({ original: path })));
-
   return (
     <>
       <Header3>Projects</Header3>
@@ -111,6 +113,7 @@ const Projects = () => {
         {projects.map((project) => {
           return (
             <ProjectItem
+              key={project.projectName}
               {...project}
               openModal={() => openModal(project.photos || [])}
             />

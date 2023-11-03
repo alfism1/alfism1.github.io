@@ -12,7 +12,10 @@ const Carrers = () => {
       <div className="border border-slate-800 rounded-lg overflow-hidden">
         {experiences?.map((experience) => {
           return (
-            <div className="grid grid-cols-12 border-b border-slate-800 py-6 hover:bg-slate-950 transition-all delay-0">
+            <div
+              key={experience.title}
+              className="grid grid-cols-12 border-b border-slate-800 py-6 hover:bg-slate-950 transition-all delay-0"
+            >
               <div className="col-span-12 lg:col-span-3 lg:text-right mb-2 lg:mb-0 text-blue-100 font-semibold text-xs md:text-sm px-6 lg:px-3">
                 {experience.periode}
               </div>
@@ -42,7 +45,8 @@ const Carrers = () => {
                 </span>
                 <Tags
                   tags={experience.techs}
-                  className="bg-red-950 border border-red-800"
+                  // className="bg-red-950 border border-red-800"
+                  // randomizeColor
                 />
               </div>
             </div>

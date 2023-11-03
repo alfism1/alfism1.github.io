@@ -1,3 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Tags from "./Tags";
+import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+
 const ProfileDescription = () => {
   return (
     <>
@@ -22,8 +26,29 @@ const ProfileDescription = () => {
       <p className="text-gray-100 text-base md:text-lg font-mono py-4 text-center lg:text-left">
         Proficient full stack developer. Frontend, backend, API, git, database,
         third party integration, payment gateway integration, cloud computing,
-        etc.
+        etc.<span className="animate-pulse-fast">|</span>
       </p>
+
+      <div className="text-gray-100 text-base md:text-lg font-mono py-4 text-center lg:text-left">
+        Tech stack <FontAwesomeIcon icon={faLaptopCode} />
+        <Tags
+          tags={[
+            "JavaScript",
+            "TypeScript",
+            "React JS",
+            "Next JS",
+            "Nest JS",
+            "PHP",
+            "Laravel",
+            "ORM",
+            "MySQL",
+            "CSS",
+            "Tailwind CSS",
+          ]}
+          containerClassName="justify-center lg:justify-start"
+          randomizeColor
+        />
+      </div>
     </>
   );
 };

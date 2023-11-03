@@ -37,7 +37,7 @@ const MyArticles = () => {
       <div className="flex flex-col gap-3 bg-slate-950 p-6 pt-0">
         {devto_articles.map((article) => {
           return (
-            <div className="border-t border-slate-900 pt-3">
+            <div key={article.id} className="border-t border-slate-900 pt-3">
               <a
                 key={article.id}
                 href={article.url}
@@ -50,7 +50,8 @@ const MyArticles = () => {
 
               <Tags
                 tags={article.tag_list}
-                className="bg-green-900 border border-green-700"
+                // className="bg-green-900 border border-green-700"
+                randomizeColor
               />
 
               <span className="block text-slate-400 text-sm mt-2">

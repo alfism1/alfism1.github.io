@@ -58,6 +58,7 @@ const SocialMedia = () => (
   <div className="flex gap-4 mt-4 justify-center lg:justify-start">
     {socialMediaList.map((socialMedia) => (
       <SocialMediaLink
+        key={socialMedia.label}
         href={socialMedia.href}
         label={socialMedia.label}
         icon={socialMedia.icon}
