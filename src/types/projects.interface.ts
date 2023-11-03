@@ -4,6 +4,6 @@ export interface Project {
   projectLink?: string;
   description: string;
   mainImage: string;
-  galleryFolder: string;
+  photos?: string[];
   techs: string[];
 }

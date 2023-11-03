@@ -1,20 +1,65 @@
 [
   {
-    "projectName": "Project 1",
-    "githubLink": "https://blablabla.com",
-    "projectLink": "blablabla.com",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo itaque blanditiis molestiae corporis dolore aliquam culpa sed. Quisquam veritatis iste hic enim, numquam iure. Eveniet facilis ipsa sit nesciunt laboriosam.",
-    "mainImage": "/projects/iss_income/1.jpg",
-    "galleryFolder": "/projects/iss_income",
-    "techs": ["HTML", "CSS", "JavaScript"]
+    "projectName": "ISS Income ERP",
+    "projectLink": "https://erp.income-iss.com",
+    "description": "ERP for managing internet service provider. It has a lot of features like: managing clients, managing services, managing payments, managing employees, etc. It also has reports and charts for better understanding of the business.",
+    "mainImage": "/projects/iss_income/6.png",
+    "photos": [
+      "/projects/iss_income/1.png",
+      "/projects/iss_income/2.png",
+      "/projects/iss_income/3.png",
+      "/projects/iss_income/4.png",
+      "/projects/iss_income/5.png",
+      "/projects/iss_income/6.png"
+    ],
+    "techs": [
+      "React",
+      "Next JS",
+      "MUI",
+      "Laravel",
+      "GitHub Webhook",
+      "HTML",
+      "CSS"
+    ]
+  },
+  {
+    "projectName": "ISS Income Payment Gateway",
+    "projectLink": "https://payment.income-iss.com",
+    "description": "Payment gateway for ISS Income internet service provider. It uses Xendit API for payments. Support Virtual Account payments",
+    "mainImage": "/projects/iss_income_payment/5.png",
+    "photos": [
+      "/projects/iss_income_payment/1.png",
+      "/projects/iss_income_payment/2.png",
+      "/projects/iss_income_payment/3.png",
+      "/projects/iss_income_payment/4.png",
+      "/projects/iss_income_payment/5.png"
+    ],
+    "techs": [
+      "React",
+      "Next JS",
+      "MUI",
+      "Laravel",
+      "GitHub Webhook",
+      "Xendit Payment Gateway",
+      "HTML",
+      "CSS"
+    ]
   },
 
   {
-    "projectName": "Project 2",
-    "githubLink": "blablabla.com",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo itaque blanditiis molestiae corporis dolore aliquam culpa sed. Quisquam veritatis iste hic enim, numquam iure. Eveniet facilis ipsa sit nesciunt laboriosam.",
-    "mainImage": "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
-    "galleryFolder": "/projects/ufatech",
-    "techs": ["HTML", "CSS", "JavaScript"]
+    "projectName": "UFA Tech",
+    "projectLink": "https://ufatech.id/",
+    "githubLink": "https://github.com/alfism1/ufa-tech",
+    "description": "Company profile of my micro team. With UFA Tech, we provide services like website development, mobile app development, and digital marketing. We have worked with many clients from Indonesia.",
+    "mainImage": "/projects/ufatech/6.png",
+    "photos": [
+      "/projects/ufatech/1.png",
+      "/projects/ufatech/2.png",
+      "/projects/ufatech/3.png",
+      "/projects/ufatech/4.png",
+      "/projects/ufatech/5.png",
+      "/projects/ufatech/6.png"
+    ],
+    "techs": ["React", "Next JS", "GraphQL", "GraphCMS"]
   }
 ]

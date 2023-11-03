@@ -1,18 +1,19 @@
 import { FC, useState } from "react";
 import Modal, { Styles } from "react-modal";
-
 import Tags from "./Tags";
-
 import Header3 from "./Reusable/Header3";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
   faArrowUpRightFromSquare,
+  faClose,
   faImages,
 } from "@fortawesome/free-solid-svg-icons";
 import ProjectActions from "./ProjectActions";
 import { Project } from "../types/projects.interface";
-
 import projects from "../datas/projects.json";
+import ImageGallery from "react-image-gallery";
+import "react-image-gallery/styles/css/image-gallery.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const modalStyles: Styles = {
   overlay: {
@@ -21,8 +22,9 @@ const modalStyles: Styles = {
   },
   content: {
     width: "80%",
-    height: "80%",
+    height: "fit-content",
     margin: "auto",
+    maxWidth: "800px",
   },
 };
 
@@ -35,14 +37,13 @@ const ProjectItem: FC<ProjectItemProps> = ({
   mainImage,
   projectName,
   description,
-  galleryFolder,
   techs,
   githubLink,
   projectLink,
   openModal,
 }) => {
   return (
-    <div className="flex  gap-4 border-b border-slate-800 p-6 hover:bg-slate-950 transition-all delay-0">
+    <div className="flex gap-4 border-b border-slate-800 p-6 hover:bg-slate-950">
       <div className="flex-none flex flex-col items-start">
         <img
           src={mainImage}
@@ -82,22 +83,32 @@ const ProjectItem: FC<ProjectItemProps> = ({
 };
 
 const Projects = () => {
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [modalIsOpen, setIsOpen] = useState<boolean>(false);
+  const [photosPath, setPhotosPath] = useState<string[]>([]);
 
-  function openModal() {
+  function openModal(photos: string[]) {
     setIsOpen(true);
+    setPhotosPath(photos);
   }
 
   function closeModal() {
     setIsOpen(false);
+    setPhotosPath([]);
   }
+
+  console.log(photosPath.map((path) => ({ original: path })));
 
   return (
     <>
       <Header3>Projects</Header3>
       <div className="border border-slate-800 rounded-lg overflow-hidden">
         {projects.map((project) => {
-          return <ProjectItem {...project} openModal={openModal} />;
+          return (
+            <ProjectItem
+              {...project}
+              openModal={() => openModal(project.photos || [])}
+            />
+          );
         })}
       </div>
 
@@ -107,7 +118,24 @@ const Projects = () => {
         style={modalStyles}
         contentLabel="Projects Gallery"
       >
-        <button onClick={closeModal}>close</button>
+        <span className="font-semibold">Project photos</span>
+        <FontAwesomeIcon
+          icon={faClose}
+          className="float-right text-2xl mb-4 cursor-pointer"
+          onClick={closeModal}
+        />
+        <div className="clear-right" />
+        <ImageGallery
+          items={photosPath.map((path) => ({
+            original: path,
+            originalClass: "h-96",
+          }))}
+          showFullscreenButton={false}
+          autoPlay={true}
+          showPlayButton={false}
+          slideDuration={500}
+          slideInterval={5000}
+        />
       </Modal>
     </>
   );
