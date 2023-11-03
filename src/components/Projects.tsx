@@ -43,32 +43,38 @@ const ProjectItem: FC<ProjectItemProps> = ({
   openModal,
 }) => {
   return (
-    <div className="flex gap-4 border-b border-slate-800 p-6 hover:bg-slate-950">
+    <div className="flex flex-wrap md:flex-nowrap gap-4 border-b border-slate-800 p-6 hover:bg-slate-950">
       <div className="flex-none flex flex-col items-start">
-        <img
-          src={mainImage}
-          alt={projectName}
-          className="object-cover w-40 h-24 rounded-lg mb-4"
-        />
+        <div className="flex md:contents sm:gap-4 flex-wrap sm:flex-nowrap md:gap-0">
+          <img
+            src={mainImage}
+            alt={projectName}
+            className="object-cover w-56 h-36 lg:w-40 lg:h-24 rounded-lg mb-4"
+          />
 
-        <div className="text-slate-200 text-xl w-full flex flex-col gap-2">
-          {githubLink && (
+          <div className="text-slate-200 text-xl w-full flex flex-col gap-2">
+            {githubLink && (
+              <ProjectActions
+                icon={faGithub}
+                label="Github"
+                onClick={() => window.open(githubLink, "_blank")}
+              />
+            )}
+
+            {projectLink && (
+              <ProjectActions
+                icon={faArrowUpRightFromSquare}
+                label="Project link"
+                onClick={() => window.open(projectLink, "_blank")}
+              />
+            )}
+
             <ProjectActions
-              icon={faGithub}
-              label="Github"
-              onClick={() => window.open(githubLink, "_blank")}
+              icon={faImages}
+              label="Gallery"
+              onClick={openModal}
             />
-          )}
-
-          {projectLink && (
-            <ProjectActions
-              icon={faArrowUpRightFromSquare}
-              label="Project link"
-              onClick={() => window.open(projectLink, "_blank")}
-            />
-          )}
-
-          <ProjectActions icon={faImages} label="Gallery" onClick={openModal} />
+          </div>
         </div>
       </div>
       <div className="text-slate-200">

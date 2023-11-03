@@ -5,6 +5,7 @@ import ProfileDescription from "./components/ProfileDescription";
 import SocialMedia from "./components/SocialMedia";
 import Divider from "./components/Reusable/Divider";
 import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 // import { useEffect, useState } from "react";
 
 function App() {
@@ -24,15 +25,15 @@ function App() {
 
   return (
     <div className="bg-slate-900 w-full h-full">
-      <Container className="py-12">
+      <Container className="py-12 px-4 lg:px-6">
         <div className="grid grid-cols-12 gap-6">
-          <div className="col-span-4">
+          <div className="col-span-12 lg:col-span-4">
             <div className="sticky top-12">
               <ProfileDescription />
               <SocialMedia />
             </div>
           </div>
-          <div className="col-span-5">
+          <div className="col-span-12 lg:col-span-5">
             <Carrers />
 
             <Divider className="my-12" />
@@ -40,10 +41,12 @@ function App() {
             <Projects />
           </div>
 
-          <div className="col-span-3">
+          <div className="col-span-12 lg:col-span-3">
             <MyArticles />
           </div>
         </div>
+
+        <Footer />
       </Container>
     </div>
   );

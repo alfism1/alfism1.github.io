@@ -8,7 +8,7 @@ interface Header3Props {
 
 const Header3: FC<Header3Props> = ({ children, className }) => {
   return (
-    <h3 className={cn("text-blue-200 text-2xl font-semibold mb-3", className)}>
+    <h3 className={cn("text-blue-200 text-xl lg:text-2xl font-semibold mb-3", className)}>
       {children}
     </h3>
   );
