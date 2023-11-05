@@ -47,6 +47,7 @@ const ProfileDescription = () => {
           ]}
           containerClassName="justify-center lg:justify-start"
           randomizeColor
+          animate
         />
       </div>
     </>

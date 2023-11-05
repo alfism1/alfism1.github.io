@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { cn } from "../utils/cn";
 
 const colorPallete = [
@@ -100,19 +100,38 @@ const colorPallete = [
   },
 ];
 
-interface TagsProps {
+type TagsProps = {
   tags: string[];
   className?: string;
   containerClassName?: string;
+} & RandomizeProps;
+
+type RandomizeProps = {
   randomizeColor?: boolean;
-}
+  animate?: boolean;
+};
 
 const Tags: FC<TagsProps> = ({
   tags,
   className,
   containerClassName,
   randomizeColor,
+  animate,
 }) => {
+  const [, setPulse] = useState<number>(0);
+
+  useEffect(() => {
+    if (!animate) return;
+
+    const interval = setInterval(() => {
+      setPulse((prev) => prev + 1);
+    }, 500);
+
+    return () => {
+      clearInterval(interval);
+    };
+  }, [animate]);
+
   return (
     <div
       className={cn(
@@ -127,7 +146,7 @@ const Tags: FC<TagsProps> = ({
           <span
             key={tag}
             className={cn(
-              "bg-slate-950 rounded-md px-1.5 py-0.5 block",
+              "bg-slate-950 rounded-md px-1.5 py-0.5 block transition-all duration-1000",
               className
             )}
             style={
