@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Tags from "./Tags";
-import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import { faLaptopCode, faDownload } from "@fortawesome/free-solid-svg-icons";
 
 const ProfileDescription = () => {
   return (
@@ -28,6 +28,15 @@ const ProfileDescription = () => {
         third party integration, payment gateway integration, cloud computing,
         etc.<span className="animate-pulse-fast">|</span>
       </p>
+
+      <a
+        href="/cv.pdf"
+        target="_blank"
+        className="text-white border border-white rounded-lg p-2 my-4 cursor-pointer w-full hover:bg-white hover:text-black transition-all flex items-center justify-center"
+      >
+        <FontAwesomeIcon icon={faDownload} className="mr-3" />
+        Download CV
+      </a>
 
       <div className="text-gray-100 text-base md:text-lg font-mono py-4 text-center lg:text-left">
         Tech stack <FontAwesomeIcon icon={faLaptopCode} />
